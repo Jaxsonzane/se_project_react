@@ -1,16 +1,16 @@
 const weatherOptions = [
-    {url: require('../images/day/day1.png').default, day: true, type: 'sunny'},
-    {url: require('../images/day/day2.png').default, day: true, type: 'cloudy'},
-    {url: require('../images/day/day3.png').default, day: true, type: 'rain'},
-    {url: require('../images/day/day4.png').default, day: true, type: 'storm'},
-    {url: require('../images/day/day5.png').default, day: true, type: 'snow'},
-    {url: require('../images/day/day6.png').default, day: true, type: 'fog'},
-    {url: require('../images/night/night1.png').default, day: false, type: 'sunny'},
-    {url: require('../images/night/night2.png').default, day: false, type: 'cloudy'},
-    {url: require('../images/night/night3.png').default, day: false, type: 'rain'},
-    {url: require('../images/night/night4.png').default, day: false, type: 'storm'},
-    {url: require('../images/night/night5.png').default, day: false, type: 'snow'},
-    {url: require('../images/night/night6.png').default, day: false, type: 'fog'},
+    {url: require('../images/day/sunnyday1.svg').default, day: true, type: 'sunny'},
+    {url: require('../images/day/cloudyday.svg').default, day: true, type: 'cloudy'},
+    {url: require('../images/day/fogday.svg').default, day: true, type: 'fog'},
+    {url: require('../images/day/rainday.svg').default, day: true, type: 'rain'},
+    {url: require('../images/day/snowday.svg').default, day: true, type: 'snow'},
+    {url: require('../images/day/stormday.svg').default, day: true, type: 'storm'},
+    {url: require('../images/night/night1.svg').default, day: false, type: 'sunny'},
+    {url: require('../images/night/night2.svg').default, day: false, type: 'cloudy'},
+    {url: require('../images/night/night3.svg').default, day: false, type: 'rain'},
+    {url: require('../images/night/night4.svg').default, day: false, type: 'storm'},
+    {url: require('../images/night/night5.svg').default, day: false, type: 'snow'},
+    {url: require('../images/night/night6.svg').default, day: false, type: 'fog'},
 ];
 
 
