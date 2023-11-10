@@ -1,6 +1,6 @@
 import './Header.css';
 
-const Header = () => {
+const Header = ({onCreateModal}) => {
     console.log('Header render');
 
     return (
@@ -14,7 +14,7 @@ const Header = () => {
             </div>
             <div className="header__avatar_section">
                 <div>
-                    <button className='header__clothes_btn' type="text">+ Add clothes</button>
+                    <button className='header__clothes_btn' type="text" onClick={onCreateModal}>+ Add clothes</button>
                 </div>
                 <div className='header__name'>Terrence Tegegne</div>
                 <div className='avatar__logo'>
