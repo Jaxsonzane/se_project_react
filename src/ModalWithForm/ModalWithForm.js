@@ -10,7 +10,7 @@ function ModalWithForm({ children, buttonText = "Add garment", title, onClose, n
                 <form>
                     {children}
                     <div>
-                    <button type="submit">{buttonText}</button>
+                    <button  type="submit">{buttonText}</button>
                     </div>
                 </form>
             </div>
