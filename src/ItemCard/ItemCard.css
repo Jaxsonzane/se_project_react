@@ -1,10 +1,16 @@
 .card__section {
     width: 100%;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 .card__name {
     text-align: center;
+    font-family: Cabinet Grotesk, sans-serif;
+    padding: 2px 12px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    border-radius: 4px;
 }
 
 .card__image {
@@ -13,10 +19,15 @@
     border-radius: 10px;
 }
 
+.card__image:hover {
+    cursor: pointer;
+}
+
 .card__items {
     display: flex;
     flex-wrap: wrap;
     gap: 17px;
     justify-content: center;
     margin-top: 34px;
+    text-align: center;
 }

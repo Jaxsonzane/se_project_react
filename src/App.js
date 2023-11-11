@@ -9,7 +9,7 @@ import ItemModal from './ItemModal/ItemModal';
 import { getForecastWeather, parseWeatherData } from './util/weatherApi';
 
 function App() {
-	const weatherTemp = '100';
+	// const weatherTemp = '100';
 	const [activeModal, setActiveModal] = useState('');
 	const [selectedCard, setSelectedCard] = useState({});
 	const [temp, setTemp] = useState(0);
@@ -29,8 +29,8 @@ function App() {
 
 	useEffect(() => {
 		getForecastWeather().then((data) => {
-			const temperature = parseWeatherData(data); 
-			setTemp(temperature);  
+			const temperature = parseWeatherData(data);
+			setTemp(temperature);
 		});
 	}, []);
 	console.log(temp);
@@ -41,15 +41,23 @@ function App() {
 			<Main weatherTemp={temp} onSelectCard={handleSelectedCard} />
 			<Footer />
 			{activeModal === 'create' && (
-				<ModalWithForm title="New Garment" onClose={handleCloseModal}>
-					<label>
-						Name <input type="text" name="name" minLength="1" maxLength="30" />
-					</label>
-					<label>
-						Image <input type="url" name="link" minLength="1" maxLength="30" />
-					</label>
-					<p>Select the weather type:</p>
-					<div>
+				<ModalWithForm
+					title="New Garment"
+					onClose={handleCloseModal}
+					setActiveModal={setActiveModal}
+				>
+					<div modal__input_container>
+						<p className="modal__input_title">Name</p>
+						<label className="modal__label">
+							<input className="modal__input" type="text" name="name" minLength="1" maxLength="30" placeholder='Name'/>
+						</label>
+						<p className="modal__input_title">Image</p>
+						<label className="modal__label">						
+							<input className="modal__input" type="url" name="link" minLength="1" maxLength="30" placeholder="Image"/>
+						</label>
+					</div>
+					<p className="modal__radio_title">Select the weather type:</p>
+					<div className="modal__radio_btns">
 						<div>
 							<input type="radio" id="hot" value="hot" />
 							<label>Hot</label>
@@ -65,9 +73,9 @@ function App() {
 					</div>
 				</ModalWithForm>
 			)}
-			{activeModal === "preview" && 
-			<ItemModal selectedCard={selectedCard} onClose={handleCloseModal} />
-			}
+			{activeModal === 'preview' && (
+				<ItemModal selectedCard={selectedCard} onClose={handleCloseModal} />
+			)}
 		</div>
 	);
 }
