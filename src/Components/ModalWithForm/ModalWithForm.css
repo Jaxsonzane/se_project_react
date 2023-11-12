@@ -24,7 +24,7 @@
 }
 
 .modal__close_btn {
-    background: transparent url(../images/modalformbtn.svg) no-repeat center;
+    background: transparent url(../../images/modalformbtn.svg) no-repeat center;
     border: none;
     width: 20px;
     height: 20px;
@@ -62,7 +62,7 @@
 }
 
 .modal__close_img {
-    background: transparent url(../images/modalformbtn.svg) no-repeat center;
+    background: transparent url(../../images/modalformbtn.svg) no-repeat center;
     border: none;
     width: 20px;
     height: 20px;
