@@ -1,7 +1,7 @@
 # WTWR (What to Wear?)
 
 Initial commit
-update node
+update node.2
 
 ## About the project
 
