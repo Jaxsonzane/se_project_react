@@ -1,6 +1,7 @@
 import './Header.css';
 import wtwrLogo from '../../images/day/wtwrlogo.svg'
 import avatarImg from '../../images/Ellipse 18.svg'
+import ToggleSwitch from '../../ToggleSwitch/ToggleSwitch';
 
 const Header = ({ onCreateModal }) => {
 	console.log('Header render');
@@ -14,6 +15,7 @@ const Header = ({ onCreateModal }) => {
 				<div className="header__date">June 15, New York</div>
 			</div>
 			<div className="header__avatar_section">
+				<ToggleSwitch />
 				<div>
 					<button
 						className="header__clothes_btn"
