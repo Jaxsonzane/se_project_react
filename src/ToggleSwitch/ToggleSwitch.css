@@ -36,14 +36,14 @@
     position: absolute;
     top: -7px;
     left: 39px;
-    color: white;
+    color: #f3f3f3;
 }
 
 .switch__temp-C {
     position: absolute;
     top: -7px;
     left: 14px;
-    color: white;
+    color: #f3f3f3;
 }
 
 .switch__active {
