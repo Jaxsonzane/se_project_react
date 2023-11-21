@@ -2,6 +2,7 @@ import './Header.css';
 import wtwrLogo from '../../images/day/wtwrlogo.svg'
 import avatarImg from '../../images/Ellipse 18.svg'
 import ToggleSwitch from '../../ToggleSwitch/ToggleSwitch';
+import { Link } from 'react-router-dom';
 
 const Header = ({ onCreateModal }) => {
 	console.log('Header render');
@@ -10,7 +11,9 @@ const Header = ({ onCreateModal }) => {
 		<header className="header">
 			<div className="header__logo">
 				<div className="wtwr__logo">
+					<Link to="/">
 					<img src={wtwrLogo} alt="logo" />
+					</Link>
 				</div>
 				<div className="header__date">June 15, New York</div>
 			</div>
@@ -25,7 +28,7 @@ const Header = ({ onCreateModal }) => {
 						+ Add clothes
 					</button>
 				</div>
-				<div className="header__name">Terrence Tegegne</div>
+				<Link to="/profile" className="header__name">Terrence Tegegne</Link>
 				<div className="avatar__logo">
 					<img src={avatarImg} alt="Avatar" />
 				</div>
