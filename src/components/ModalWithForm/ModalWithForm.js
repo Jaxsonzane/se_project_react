@@ -1,6 +1,6 @@
 import './ModalWithForm.css'
 
-function ModalWithForm({ children, buttonText = "Add garment", title, onClose, name, setActiceModal, onSubmit }) {
+function ModalWithForm({ children, buttonText = "Add garment", title, onClose, name, setActiveModal, onSubmit }) {
 
     return (
         <div className={`modal modal__type_${name}`}>

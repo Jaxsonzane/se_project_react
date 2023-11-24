@@ -3,6 +3,7 @@ import './App.css';
 import Header from '../components/Header/Header';
 import Main from '../components/Main/Main';
 import Footer from '../components/Footer/Footer';
+import Profile from '../components/Profile/Profile';
 import ModalWithForm from '../components/ModalWithForm/ModalWithForm';
 import { useEffect, useState } from 'react';
 import ItemModal from '../components/ItemModal/ItemModal';
@@ -60,10 +61,14 @@ function App() {
 					<Route exact path="/">
 						<Main weatherTemp={temp} onSelectCard={handleSelectedCard} />
 					</Route>
-					<Route path="/profile">Profile</Route>
+					<Route path="/profile">
+						<Profile 
+						onSelectCard={handleSelectedCard}
+						handleOpenModal={handleCreateModal}
+						// clothingItems={clothingItems} 
+						/>
+					</Route>
 				</Switch>
-
-				<Main weatherTemp={temp} onSelectCard={handleSelectedCard} />
 				<Footer />
 				{activeModal === 'create' && (
 					<AddItemModal
