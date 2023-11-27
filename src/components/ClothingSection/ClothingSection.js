@@ -1,7 +1,7 @@
 import ItemCard from "../ItemCard/ItemCard";
 import "./ClothingSection.css";
 
-const ClothingSection = ({ onSelectCard, handleOpenModal, clothingItems }) => {
+const ClothingSection = ({ onSelectCard, onCreateModal, clothingItems }) => {
   return (
     <>
       <div className="clothingsection__content">
@@ -9,17 +9,17 @@ const ClothingSection = ({ onSelectCard, handleOpenModal, clothingItems }) => {
         <button
           className="clothingsection__add-clothes-button"
           type="button"
-          onClick={handleOpenModal}
+          onClick={onCreateModal}
         >
           + Add new
         </button>
       </div>
       <div className="clothingsection__card-wrapper">
-        {clothingItems && clothingItems.map((item) => {
+        {clothingItems.map((item) => {
           return (
-            <ItemCard key={item._id} item={item} onSelectCard={onSelectCard} />
+          <ItemCard key={item._id} item={item} onSelectCard={onSelectCard} />
           );
-        })}
+          })}
       </div>
     </>
   );

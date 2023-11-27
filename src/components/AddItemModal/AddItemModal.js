@@ -1,16 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
 import './AddItemModal.css';
-import { useForm } from "../../hooks/useForm";
 
 const AddItemModal = ({ handleCloseModal, isOpen, onAddItem, buttonText }) => {
-  const {values, handleChange, setValues} = useForm({});
+  
+const [name, setName] = useState('');
+const handleNameChange = (e) => {
+  setName(e.target.value);
+}
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    onAddItem(values);
-  };
+const [imageUrl, setImageUrl] = useState('');
+const handleUrlChange = (e) => {
+  setImageUrl(e.target.value);
+}
 
+const [weather, setWeather] = useState('');
+
+const handleWeatherChange = (e) => {
+  setWeather(e.target.value);
+}
+
+const handleSubmit = (e) => {
+  onAddItem({name, weather, imageUrl});
+}
   return (
     <ModalWithForm
       title="New Garmnet"
@@ -24,23 +36,23 @@ const AddItemModal = ({ handleCloseModal, isOpen, onAddItem, buttonText }) => {
         className="modal__input modal__input_type_text"
         type="text"
         name="name"
-        value={values.name || ''}
+        value={name}
         minLength="1"
         maxLength="30"
         placeholder="Name"
         id="name"
-        onChange={handleChange}
+        onChange={handleNameChange}
       />
       <label className="modal__label">Image</label>
       <input
         className="modal__input modal__input_type_text"
         type="url"
         name="imageUrl"
-        value={values.imageUrl || ''}
+        value={imageUrl}
         minLength="1"
         id="link"
         placeholder="Image URL"
-        onChange={handleChange}
+        onChange={handleUrlChange}
       />
       <label className="modal__label">Select the weather type:</label>
       <div>
@@ -51,7 +63,7 @@ const AddItemModal = ({ handleCloseModal, isOpen, onAddItem, buttonText }) => {
             name="weather"
             id="Hot"
             value="hot"
-            onChange={handleChange}
+            onChange={handleWeatherChange}
           />
           <label className="modal__label_radio" htmlFor="Hot">
             Hot
@@ -64,7 +76,7 @@ const AddItemModal = ({ handleCloseModal, isOpen, onAddItem, buttonText }) => {
             name="weather"
             id="Warm"
             value="warm"
-            onChange={handleChange}
+            onChange={handleWeatherChange}
           />
           <label className="modal__label_radio" htmlFor="Warm">
             Warm
@@ -77,7 +89,7 @@ const AddItemModal = ({ handleCloseModal, isOpen, onAddItem, buttonText }) => {
             name="weather"
             id="Cold"
             value="cold"
-            onChange={handleChange}
+            onChange={handleWeatherChange}
           />
           <label className=" modal__label_radio" htmlFor="Cold">
             Cold
