@@ -15,7 +15,7 @@ const ClothingSection = ({ onSelectCard, handleOpenModal, clothingItems }) => {
         </button>
       </div>
       <div className="clothingsection__card-wrapper">
-        {clothingItems.map((item) => {
+        {clothingItems && clothingItems.map((item) => {
           return (
             <ItemCard key={item._id} item={item} onSelectCard={onSelectCard} />
           );

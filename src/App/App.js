@@ -38,6 +38,7 @@ function App() {
 
 	const onAddItem = (values) => {
 		console.log(values);
+		setClothingItems(prevItems => [...prevItems, values]);
 	};
 
 	const handleToggleSwitchChange = () => {
@@ -85,7 +86,7 @@ function App() {
 						<Profile
 							onSelectCard={handleSelectedCard}
 							handleOpenModal={handleCreateModal}
-							// clothingItems={clothingItems}
+							clothingItems={clothingItems}
 						/>
 					</Route>
 				</Switch>
@@ -95,6 +96,7 @@ function App() {
 						handleCloseModal={handleCloseModal}
 						setActiveModal={activeModal === 'create'}
 						onAddItem={onAddItem}
+						onClick={handleCloseModal}
 					/>
 				)}
 				{activeModal === 'preview' && (
