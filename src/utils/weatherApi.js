@@ -16,6 +16,10 @@ export const getForecastWeather = () => {
 	return weatherApi;
 };
 
+const findWeatherOption = (option, day, weather) => {
+	return option.day === day && option.type === weather;
+};
+
 export const parseWeatherData = (data) => {
 	const main = data.main;
 	const temperature = main && main.temp;
@@ -28,6 +32,10 @@ export const parseWeatherData = (data) => {
 	console.log(weather);
 	return weather;
 };
+
+export {
+	findWeatherOption
+}
 
 // weather.temperature.F = `${Math.round(data.main.temp)}°F`;
 // weather.temperature.C = `${Math.round((data.main.temp - 32) * 5/9)}°C`;

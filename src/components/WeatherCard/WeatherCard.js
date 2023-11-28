@@ -1,19 +1,31 @@
 import './Weather.css';
-import { weatherOptions } from '../../utils/constants';
+import { findWeatherOption } from '../../utils/weatherApi';
+import { weatherConditions } from '../../utils/constants';
+import { useContext } from 'react';
+import { CurrentTemperatureUnitContext } from '../../Context/CurrentTemperatureUnitContext';
 
-const WeatherCard = ({ day = true, type = 'sunny', weatherTemp = 0 }) => {
-	const imageSrc = weatherOptions.filter((i) => {
-		return i.day === day && i.type === type;
-	});
-
-	const imageSrcUrl = imageSrc[0].url || '';
-
-	return (
-		<section className="weather">
-			<div className="weather__info">{weatherTemp}° F</div>
-			<img src={imageSrcUrl} alt={type} className="weather__image" />
-		</section>
+const WeatherCard = ({ day, weather, weatherTemp }) => {
+	const { currentTemperatureUnit } = useContext(CurrentTemperatureUnitContext);
+  
+	const weatherOption = weatherConditions.filter((option) =>
+	  findWeatherOption(option, day, weather)
 	);
-};
+  
+	const imageSrcUrl = weatherOption.length > 0 ? weatherOption[0].url : "";
+	const altText = weatherOption.length > 0 ? weatherOption[0].weather : "";
+  
+	return (
+	  <div className="weather">
+		<p className="weather__info">
+		  {weatherTemp}°{currentTemperatureUnit}
+		</p>
+		<img
+		  className="weather__image"
+		  src={imageSrcUrl}
+		  alt={altText}
+		/>
+	  </div>
+	);
+  };
 
 export default WeatherCard;

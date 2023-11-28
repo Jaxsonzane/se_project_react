@@ -2,6 +2,7 @@ import ItemCard from "../ItemCard/ItemCard";
 import "./ClothingSection.css";
 
 const ClothingSection = ({ onSelectCard, onCreateModal, clothingItems }) => {
+  
   return (
     <>
       <div className="clothingsection__content">

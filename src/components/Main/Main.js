@@ -19,7 +19,8 @@ function Main({ weatherTemp, onSelectCard }) {
 		} else if (temp <= 65) {
 			return 'cold';
 		}
-	}, [weatherTemp]);
+
+	}, []);
 	
 
 	const filteredCards = defaultClothingItems.filter((item) => {

@@ -1,4 +1,4 @@
-export const defaultClothingItems = [
+const defaultClothingItems = [
 	{
 		_id: 0,
 		name: 'Cap',
@@ -37,7 +37,7 @@ export const defaultClothingItems = [
 	},
 ];
 
-export const weatherOptions = [
+const weatherConditions = [
     {url: require('../images/day/sunnyday1.svg').default, day: true, type: 'sunny'},
     {url: require('../images/day/cloudyday.svg').default, day: true, type: 'cloudy'},
     {url: require('../images/day/fogday.svg').default, day: true, type: 'fog'},
@@ -51,3 +51,8 @@ export const weatherOptions = [
     {url: require('../images/night/night5.svg').default, day: false, type: 'snow'},
     {url: require('../images/night/night6.svg').default, day: false, type: 'fog'},
 ];
+
+export {
+	defaultClothingItems,
+	weatherConditions
+}
