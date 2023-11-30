@@ -23,6 +23,7 @@ function App() {
 	const [clothingItems, setClothingItems] = useState([]);
 	const [isLoading, setIsLoading] = useState(0);
 
+
 	const handleCreateModal = () => {
 		setActiveModal('create');
 	};
@@ -38,7 +39,8 @@ function App() {
 
 	const onAddItem = (values) => {
 		console.log(values);
-		setClothingItems((prevItems) => [...prevItems, values]);
+		postCard(values).then(() => {
+		setClothingItems((prevItems) => [...prevItems, values]);})
 	};
 
 	const handleToggleSwitchChange = () => {
@@ -71,6 +73,22 @@ function App() {
 				console.error('An error occurred while fetching weather data.', error);
 			});
 	}, []);
+
+	useEffect(() => {
+		getCards()
+		  .then((data) => {
+			const items = data.sort(
+			  (a, b) => Date.parse(b.createdAt) - Date.parse(a.createdAt)
+			);
+			setClothingItems(items);
+		  })
+		  .catch((err) => {
+			console.log(err);
+		  });
+	  }, []);
+	
+
+	
 
 	return (
 		<div>

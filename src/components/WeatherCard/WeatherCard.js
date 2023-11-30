@@ -5,8 +5,8 @@ import { useContext } from 'react';
 import { CurrentTemperatureUnitContext } from '../../Context/CurrentTemperatureUnitContext';
 
 const WeatherCard = ({ day, weather, weatherTemp }) => {
-	const { currentTemperatureUnit } = useContext(CurrentTemperatureUnitContext);
-  
+	const { currentTempUnit } = useContext(CurrentTemperatureUnitContext);
+  console.log(day, weather, weatherTemp);
 	const weatherOption = weatherConditions.filter((option) =>
 	  findWeatherOption(option, day, weather)
 	);
@@ -17,7 +17,7 @@ const WeatherCard = ({ day, weather, weatherTemp }) => {
 	return (
 	  <div className="weather">
 		<p className="weather__info">
-		  {weatherTemp}°{currentTemperatureUnit}
+		  {weatherTemp}°{currentTempUnit}
 		</p>
 		<img
 		  className="weather__image"

@@ -12,10 +12,21 @@ const AddItemModal = ({ handleCloseModal, onAddItem, setActiveModal }) => {
 		console.log(e.target.value);
 		setUrl(e.target.value);
 	};
+	const [weather, setWeather] = useState('');
+	const handleWeatherChange = (e) => {
+		console.log(e.target.value);
+		setWeather(e.target.value);
+	};
+	const getID = () => {
+		const timestamp = new Date().getTime();
+		const randomNum = Math.random().toString(36).substring(2, 8);
+
+		return `${timestamp}-${randomNum}`;
+	};
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		onAddItem({ name, link });
+		onAddItem({ name,  link, weather, _id: getID() });
 	};
 	return (
 		<ModalWithForm
@@ -45,7 +56,6 @@ const AddItemModal = ({ handleCloseModal, onAddItem, setActiveModal }) => {
 						type="url"
 						name="link"
 						minLength="1"
-						maxLength="30"
 						placeholder="Image"
 						value={link}
 						onChange={handleUrlChange}
@@ -56,19 +66,37 @@ const AddItemModal = ({ handleCloseModal, onAddItem, setActiveModal }) => {
 			<div className="modal__radio_btns">
 				<div>
 					<label>
-						<input type="radio" id="hot" value="hot" name="temperature" />
+						<input
+							type="radio"
+							id="hot"
+							value="hot"
+							name="temperature"
+							onChange={handleWeatherChange}
+						/>
 						Hot
 					</label>
 				</div>
 				<div>
 					<label>
-						<input type="radio" id="warm" value="warm" name="temperature" />
+						<input
+							type="radio"
+							id="warm"
+							value="warm"
+							name="temperature"
+							onChange={handleWeatherChange}
+						/>
 						Warm
 					</label>
 				</div>
 				<div>
 					<label>
-						<input type="radio" id="cold" value="cold" name="temperature" />
+						<input
+							type="radio"
+							id="cold"
+							value="cold"
+							name="temperature"
+							onChange={handleWeatherChange}
+						/>
 						Cold
 					</label>
 				</div>

@@ -1,20 +1,26 @@
 .weather {
     position: relative;
-}
-
-.weather__info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 80px;
+    max-width: 1350px;
+    border-radius: 12px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .weather__info {
     position: absolute;
     top: 20px;
     left: 16px;
-    color: #FFF;
-    font-family: Cabinet Grotesk;
+    margin: 0;
     font-size: 36px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 40px; /* 111.111% */
-}
-
-.weather__image {
-    width: 100%;
+    line-height: 40px;
+    color: white;
+  }
+  
+  .weather__image {
     height: 80px;
-}
+    max-width: 1350px;
+  }

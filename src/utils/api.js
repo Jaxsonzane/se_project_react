@@ -12,10 +12,15 @@ const processServerResponce = (res) => {
 };
 
 const getCards = () => {
-  return request(`${baseUrl}/items`);
+  return fetch(`${baseUrl}/items`, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
 };
 
-const postCard = ({ name, imageUrl, weather }) => {
+const postCard = ({ name, link, weather }) => {
   const options = {
     method: "POST",
     headers: {
@@ -23,7 +28,7 @@ const postCard = ({ name, imageUrl, weather }) => {
     },
     body: JSON.stringify({
       name: name,
-      imageUrl: imageUrl,
+      link: link,
       weather: weather,
     }),
   };

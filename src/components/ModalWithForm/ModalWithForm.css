@@ -153,3 +153,13 @@
 .modal__card_name {
    margin: 0;
 }
+
+.modal__delete-button {
+    color: #ff4000;
+    border: none;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 700;
+    font-family: Cabinet Grotesk, sans-serif;
+    opacity: 1;
+}
