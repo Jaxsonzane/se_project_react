@@ -2,7 +2,7 @@ import './Weather.css';
 import { findWeatherOption } from '../../utils/weatherApi';
 import { weatherConditions } from '../../utils/constants';
 import { useContext } from 'react';
-import { CurrentTemperatureUnitContext } from '../../context/CurrentTemperatureUnitContext';
+import { CurrentTemperatureUnitContext } from '../../contexts/CurrentTemperatureUnitContext';
 
 const WeatherCard = ({ day, weather, weatherTemp }) => {
 	const { currentTempUnit } = useContext(CurrentTemperatureUnitContext);
