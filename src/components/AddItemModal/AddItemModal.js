@@ -1,108 +1,109 @@
-import React, { useState } from "react";
-import ModalWithForm from "../ModalWithForm/ModalWithForm";
+import React, { useState } from 'react';
+import ModalWithForm from '../ModalWithForm/ModalWithForm';
 import './AddItemModal.css';
 
-const AddItemModal = ({ handleCloseModal, isOpen, onAddItem, buttonText }) => {
-  
-const [name, setName] = useState('');
-const handleNameChange = (e) => {
-  setName(e.target.value);
-}
+const AddItemModal = ({ handleCloseModal, onAddItem, setActiveModal }) => {
+	const [name, setName] = useState('');
+	const handleNameChange = (e) => {
+		console.log(e.target.value);
+		setName(e.target.value);
+	};
+	const [link, setUrl] = useState('');
+	const handleUrlChange = (e) => {
+		console.log(e.target.value);
+		setUrl(e.target.value);
+	};
+	const [weather, setWeather] = useState('');
+	const handleWeatherChange = (e) => {
+		console.log(e.target.value);
+		setWeather(e.target.value);
+	};
+	const getID = () => {
+		const timestamp = new Date().getTime();
+		const randomNum = Math.random().toString(36).substring(2, 8);
 
-const [imageUrl, setImageUrl] = useState('');
-const handleUrlChange = (e) => {
-  setImageUrl(e.target.value);
-}
+		return `${timestamp}-${randomNum}`;
+	};
 
-const [weather, setWeather] = useState('');
-
-const handleWeatherChange = (e) => {
-  setWeather(e.target.value);
-}
-
-const handleSubmit = (e) => {
-  onAddItem({name, weather, imageUrl});
-}
-  return (
-    <ModalWithForm
-      title="New Garmnet"
-      onClose={handleCloseModal}
-      isOpen={isOpen}
-      onSubmit={handleSubmit}
-    >
-      <label className="modal__label">Name</label>
-
-      <input
-        className="modal__input modal__input_type_text"
-        type="text"
-        name="name"
-        value={name}
-        minLength="1"
-        maxLength="30"
-        placeholder="Name"
-        id="name"
-        onChange={handleNameChange}
-      />
-      <label className="modal__label">Image</label>
-      <input
-        className="modal__input modal__input_type_text"
-        type="url"
-        name="imageUrl"
-        value={imageUrl}
-        minLength="1"
-        id="link"
-        placeholder="Image URL"
-        onChange={handleUrlChange}
-      />
-      <label className="modal__label">Select the weather type:</label>
-      <div>
-        <div className="modal__radio-container">
-          <input
-            className="modal__input_radio"
-            type="radio"
-            name="weather"
-            id="Hot"
-            value="hot"
-            onChange={handleWeatherChange}
-          />
-          <label className="modal__label_radio" htmlFor="Hot">
-            Hot
-          </label>
-        </div>
-        <div className="modal__radio-container">
-          <input
-            className="modal__input_radio"
-            type="radio"
-            name="weather"
-            id="Warm"
-            value="warm"
-            onChange={handleWeatherChange}
-          />
-          <label className="modal__label_radio" htmlFor="Warm">
-            Warm
-          </label>
-        </div>
-        <div className="modal__radio-container">
-          <input
-            className=" modal__input_radio"
-            type="radio"
-            name="weather"
-            id="Cold"
-            value="cold"
-            onChange={handleWeatherChange}
-          />
-          <label className=" modal__label_radio" htmlFor="Cold">
-            Cold
-          </label>
-        </div>
-      </div>
-      <div className="modal__button-container">
-        <button className="modal__submit-button" type="submit">
-          {buttonText}
-        </button>
-      </div>
-    </ModalWithForm>
-  );
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		onAddItem({ name, link, weather, _id: getID() });
+	};
+	return (
+		<ModalWithForm
+			title="New Garment"
+			onClose={handleCloseModal}
+			setActiveModal={setActiveModal}
+			onSubmit={handleSubmit}
+			className="modal__garment_title"
+		>
+			<div className="modal__input_container">
+				<label className="modal__label">
+					<p className="modal__input_title">Name</p>
+					<input
+						className="modal__input"
+						type="text"
+						name="name"
+						minLength="1"
+						placeholder="Name"
+						value={name}
+						onChange={handleNameChange}
+					/>
+				</label>
+				<label className="modal__label">
+					<p className="modal__input_title">Image</p>
+					<input
+						className="modal__input"
+						type="url"
+						name="link"
+						minLength="1"
+						placeholder="Image"
+						value={link}
+						onChange={handleUrlChange}
+					/>
+				</label>
+			</div>
+			<p className="modal__radio_title">Select the weather type:</p>
+			<div className="modal__radio_btns">
+				<div>
+					<label>
+						<input
+							type="radio"
+							id="hot"
+							value="hot"
+							name="temperature"
+							onChange={handleWeatherChange}
+						/>
+						Hot
+					</label>
+				</div>
+				<div>
+					<label>
+						<input
+							type="radio"
+							id="warm"
+							value="warm"
+							name="temperature"
+							onChange={handleWeatherChange}
+						/>
+						Warm
+					</label>
+				</div>
+				<div>
+					<label>
+						<input
+							type="radio"
+							id="cold"
+							value="cold"
+							name="temperature"
+							onChange={handleWeatherChange}
+						/>
+						Cold
+					</label>
+				</div>
+			</div>
+		</ModalWithForm>
+	);
 };
 
 export default AddItemModal;

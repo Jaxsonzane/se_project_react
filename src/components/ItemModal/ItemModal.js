@@ -1,11 +1,11 @@
 import "./ItemModal.css";
 
-const ItemModal = ({ selectedCard, onClose, openModal, buttonText }) => {
+const ItemModal = ({ selectedCard, onClose, openModal }) => {
 	return (
-		<div className={`modal`}>
-			<div className="modal__content modal__content_item">
+		<div className='modal modal__preview'>
+			<div className="modal__content">
 				<button
-					className="modal__close_img"
+					className="modal__close"
 					type="button"
 					onClick={onClose}
 				></button>
@@ -14,17 +14,18 @@ const ItemModal = ({ selectedCard, onClose, openModal, buttonText }) => {
 					src={selectedCard.link}
 					alt={selectedCard.name}
 				/>
+				<div className='modal__button-wrap'>
 				<p className="modal__card_name"> {selectedCard.name} </p>
-				<p className="modal__card_weather"> Weather: {selectedCard.weather} </p>
-			</div>
-			<div className="modal__button-wrap"> Delete Item
 				<button
 					onClick={openModal}
 					type="button"
-					className="modal__delete-button"
+					className="modal__delete-btn"
 				>
-					{buttonText}
+					Delete Item
 				</button>
+			
+			</div>
+				<p className="modal__card_weather"> Weather: {selectedCard.weather} </p>
 			</div>
 		</div>
 	);

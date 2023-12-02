@@ -9,21 +9,28 @@ const ModalWithConfirmation = ({ onClose, isOpen, onSubmit, buttonText }) => {
 
   return (
     <ModalWithForm
-      title="Confirm Deletion"
-      buttonText="Delete"
+      title=""
+      buttonText="Yes, delete item"
       onClose={onClose}
       isOpen={isOpen}
       onSubmit={handleSubmit}
-      className="modal"
+      className="modal__confirm_deletion"
+      
     >
       <p className="modal__text">Are you sure you want to delete this item?</p>
-      <div className="modal__button-wrap">
-        <button type="submit" className="confirmmodal__buttons">
+      <p className="modal__text">This action is irreversible.</p>
+      <div className="modal__confirm_btns">
+        <button
+          onClick={handleSubmit}
+          className="confirm__modal_btn"
+          type="submit"
+        >
           {buttonText}
         </button>
+        
         <button
           onClick={onClose}
-          className="confirmmodal__buttons"
+          className="confirm__modal_btn"
           type="button"
         >
           Cancel

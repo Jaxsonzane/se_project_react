@@ -1,21 +1,51 @@
-.modal__submit-button {
-    width: 124px;
-    height: 36px;
-    padding: 8px, 16px, 8px, 16px;
-    margin: 24px 0px;
-    background-color: rgba(0, 0, 0, 0.3);
-    border: none;
-    border-radius: 4px;
-    color: white;
-    font-family: "Cabinet-Grotesk", sans-serif;
-    font-size: 16px;
-    font-weight: 700px;
-    line-height: 20px;
-    font-weight: bold;
-  }
-  
-  .modal__submit-button:hover {
-    cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.5);
-    animation: 3s ease-in-out 0s 1 normal none running;
-  }
+.modal__title {
+	margin: 28px 0 12px 24px;
+	color: #000;
+	font-family: Cabinet Grotesk, sans-serif;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 20px;
+	gap: 8px;
+}
+
+.modal__label {
+	margin-left: 24px;
+	margin-right: 24px;
+}
+
+.modal__input_title {
+	margin: 0 0 8px;
+	color: #000;
+	font-family: Cabinet Grotesk;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 20px; /* 125% */
+}
+
+.modal__radio_title {
+	color: #000;
+	font-family: Cabinet Grotesk;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 20px; /* 125% */
+	margin-left: 24px;
+}
+
+.modal__radio_btns {
+	margin: 0 0 24px 24px;
+}
+
+.modal__add_btn {
+	background: rgba(0, 0, 0, 0.3);
+	cursor: pointer;
+	margin-bottom: 36px;
+	margin-left: 24px;
+}
+
+.moddal__add_btn:hover {
+	border-radius: 4px;
+	background: rgba(191, 8, 8, 0.6);
+}
