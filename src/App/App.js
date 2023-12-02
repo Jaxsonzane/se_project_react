@@ -8,7 +8,7 @@ import ModalWithConfirmation from '../components/ModalWithConfirmation/ModalWith
 import { useEffect, useState } from 'react';
 import ItemModal from '../components/ItemModal/ItemModal';
 import { getForecastWeather, parseWeatherData } from '../utils/weatherApi';
-import { CurrentTemperatureUnitContext } from '../Context/CurrentTemperatureUnitContext';
+import { CurrentTemperatureUnitContext } from '../context/CurrentTemperatureUnitContext';
 import { getCards, postCard, deleteCard } from '../utils/api';
 import { Switch, Route } from 'react-router-dom';
 import AddItemModal from '../components/AddItemModal/AddItemModal';
