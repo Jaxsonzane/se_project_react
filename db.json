@@ -84,6 +84,60 @@
         "link": "data:image/webp;base64,UklGRtg"
       },
       "_id": 17
+    },
+    {
+      "name": "hat",
+      "link": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTWJIKbXea3BBZ2pa4QAqMSX-NMZxwZy3q9s1t5fpqNMJu1cpMKvWAzETrCQbZqeuN4r78jSfXlYs8NsJmGecu6ZJqYVFf8oASC5os1DpwjV2pteRMyYYKSRoMQ0yKmGvuGi9E0iQ&usqp=CAc",
+      "weather": "cold",
+      "_id": 18
+    },
+    {
+      "name": "hat",
+      "link": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTWJIKbXea3BBZ2pa4QAqMSX-NMZxwZy3q9s1t5fpqNMJu1cpMKvWAzETrCQbZqeuN4r78jSfXlYs8NsJmGecu6ZJqYVFf8oASC5os1DpwjV2pteRMyYYKSRoMQ0yKmGvuGi9E0iQ&usqp=CAc",
+      "weather": "hot",
+      "_id": 19
+    },
+    {
+      "name": "hat",
+      "link": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTWJIKbXea3BBZ2pa4QAqMSX-NMZxwZy3q9s1t5fpqNMJu1cpMKvWAzETrCQbZqeuN4r78jSfXlYs8NsJmGecu6ZJqYVFf8oASC5os1DpwjV2pteRMyYYKSRoMQ0yKmGvuGi9E0iQ&usqp=CAc",
+      "weather": "cold",
+      "_id": 20
+    },
+    {
+      "name": "shirt",
+      "link": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSl7WvgNsAkjVtuQhXoHzpPHUPRIuu33RJs7py7o7RMAX5UlnkrhtCP5P5ku9kVCfzIqBJOSdDJMDu_o5Rlk3Xa9eQgsSRU7vNKpUeF5C-LH0PERixvjkBRa8w0PZ1GJZQx35DCMg&usqp=CAc",
+      "weather": "warm",
+      "_id": 21
+    },
+    {
+      "name": "shirt",
+      "link": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSl7WvgNsAkjVtuQhXoHzpPHUPRIuu33RJs7py7o7RMAX5UlnkrhtCP5P5ku9kVCfzIqBJOSdDJMDu_o5Rlk3Xa9eQgsSRU7vNKpUeF5C-LH0PERixvjkBRa8w0PZ1GJZQx35DCMg&usqp=CAc",
+      "weather": "hot",
+      "_id": 22
+    },
+    {
+      "name": "shirt",
+      "link": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSl7WvgNsAkjVtuQhXoHzpPHUPRIuu33RJs7py7o7RMAX5UlnkrhtCP5P5ku9kVCfzIqBJOSdDJMDu_o5Rlk3Xa9eQgsSRU7vNKpUeF5C-LH0PERixvjkBRa8w0PZ1GJZQx35DCMg&usqp=CAc",
+      "weather": "cold",
+      "_id": 23
+    },
+    {
+      "name": "shirt",
+      "link": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSl7WvgNsAkjVtuQhXoHzpPHUPRIuu33RJs7py7o7RMAX5UlnkrhtCP5P5ku9kVCfzIqBJOSdDJMDu_o5Rlk3Xa9eQgsSRU7vNKpUeF5C-LH0PERixvjkBRa8w0PZ1GJZQx35DCMg&usqp=CAc",
+      "weather": "cold",
+      "_id": 24
+    },
+    {
+      "name": "coat",
+      "link": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQXPFFq3Ka3i2gbGTIE1vQzRuRJ7-CKJX8UP1oUyrQqRVWj2I-_TMnfhTVQB82_lW4CvpwP2g2_dKmgWx7iDNQJn31OimJviPdFxCLojmzmDVG3rzlFJwk6-6-G_9O7SpehnwoRZILaWA&usqp=CAc",
+      "weather": "cold",
+      "_id": 25
+    },
+    {
+      "name": "shirt",
+      "link": "https://www.rei.com/media/48a3f17e-e358-4ef3-bd9f-d024aa2183f1.jpg?size=576x768",
+      "weather": "warm",
+      "_id": 26
     }
   ]
 }

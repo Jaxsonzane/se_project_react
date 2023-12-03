@@ -40,6 +40,7 @@ function App() {
 		postCard(values).then(() => {
 			setClothingItems((prevItems) => [...prevItems, values]);
 		});
+		handleCloseModal();
 	};
 
 	const handleToggleSwitchChange = () => {
@@ -66,20 +67,20 @@ function App() {
 			.finally(() => setIsLoading(false));
 	};
 
-	// function deleteCard(id) {
-	// 	return fetch(`http://localhost:3001/items/${id}`, {
-	// 		method: 'DELETE',
-	// 	})
-	// 		.then(response => {
-	// 			if (!response.ok) {
-	// 				throw new Error('Network response was not ok');
-	// 			}
-	// 			return response.json();
-	// 		})
-	// 		.catch(error => {
-	// 			console.error('There has been a problem with your fetch operation:', error);
-	// 		});
-	// }
+	function deleteCard(id) {
+		return fetch(`http://localhost:3001/items/${id}`, {
+			method: 'DELETE',
+		})
+			.then(response => {
+				if (!response.ok) {
+					throw new Error('Network response was not ok');
+				}
+				return response.json();
+			})
+			.catch(error => {
+				console.error('There has been a problem with your fetch operation:', error);
+			});
+	}
 
 	useEffect(() => {
 		getForecastWeather()
