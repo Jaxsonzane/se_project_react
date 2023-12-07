@@ -1,22 +1,10 @@
 {
   "items": [
     {
-      "_id": 0,
-      "name": "Beanie",
-      "weather": "cold",
-      "imageUrl": "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/Beanie.png?etag=bc10497cc80fa557f036e94f9999f7b2"
-    },
-    {
       "_id": 1,
       "name": "Boot",
       "weather": "cold",
       "imageUrl": "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/Boot.png?etag=0953a2ea59f1c6ebc832fabacdc9c70e"
-    },
-    {
-      "_id": 6,
-      "name": "Jacket",
-      "weather": "cold",
-      "imageUrl": "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/Jacket.png?etag=f4bb188deaa25ac84ce2338be2d404ad"
     },
     {
       "_id": 7,
@@ -29,12 +17,6 @@
       "name": "Loafers",
       "weather": "warm",
       "imageUrl": "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/Loafers.png?etag=dc2d6e1ca7b297597406e35c40aef030"
-    },
-    {
-      "_id": 9,
-      "name": "Sandals",
-      "weather": "hot",
-      "imageUrl": "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/Sandals.png?etag=9bea85a77c0306586d2b71a33b626d41"
     },
     {
       "_id": 10,
@@ -79,65 +61,15 @@
       "imageUrl": "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/T-Shirt.png?etag=44ed1963c44ab19cd2f5011522c5fc09"
     },
     {
-      "name": {
-        "name": "hat",
-        "link": "data:image/webp;base64,UklGRtg"
-      },
+      "name": "shirt",
+      "weather": "cold",
       "_id": 17
     },
     {
       "name": "hat",
-      "link": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTWJIKbXea3BBZ2pa4QAqMSX-NMZxwZy3q9s1t5fpqNMJu1cpMKvWAzETrCQbZqeuN4r78jSfXlYs8NsJmGecu6ZJqYVFf8oASC5os1DpwjV2pteRMyYYKSRoMQ0yKmGvuGi9E0iQ&usqp=CAc",
+      "imageUrl": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/47/66/40/caption.jpg?w=700&h=500&s=1",
       "weather": "cold",
       "_id": 18
-    },
-    {
-      "name": "hat",
-      "link": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTWJIKbXea3BBZ2pa4QAqMSX-NMZxwZy3q9s1t5fpqNMJu1cpMKvWAzETrCQbZqeuN4r78jSfXlYs8NsJmGecu6ZJqYVFf8oASC5os1DpwjV2pteRMyYYKSRoMQ0yKmGvuGi9E0iQ&usqp=CAc",
-      "weather": "hot",
-      "_id": 19
-    },
-    {
-      "name": "hat",
-      "link": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTWJIKbXea3BBZ2pa4QAqMSX-NMZxwZy3q9s1t5fpqNMJu1cpMKvWAzETrCQbZqeuN4r78jSfXlYs8NsJmGecu6ZJqYVFf8oASC5os1DpwjV2pteRMyYYKSRoMQ0yKmGvuGi9E0iQ&usqp=CAc",
-      "weather": "cold",
-      "_id": 20
-    },
-    {
-      "name": "shirt",
-      "link": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSl7WvgNsAkjVtuQhXoHzpPHUPRIuu33RJs7py7o7RMAX5UlnkrhtCP5P5ku9kVCfzIqBJOSdDJMDu_o5Rlk3Xa9eQgsSRU7vNKpUeF5C-LH0PERixvjkBRa8w0PZ1GJZQx35DCMg&usqp=CAc",
-      "weather": "warm",
-      "_id": 21
-    },
-    {
-      "name": "shirt",
-      "link": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSl7WvgNsAkjVtuQhXoHzpPHUPRIuu33RJs7py7o7RMAX5UlnkrhtCP5P5ku9kVCfzIqBJOSdDJMDu_o5Rlk3Xa9eQgsSRU7vNKpUeF5C-LH0PERixvjkBRa8w0PZ1GJZQx35DCMg&usqp=CAc",
-      "weather": "hot",
-      "_id": 22
-    },
-    {
-      "name": "shirt",
-      "link": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSl7WvgNsAkjVtuQhXoHzpPHUPRIuu33RJs7py7o7RMAX5UlnkrhtCP5P5ku9kVCfzIqBJOSdDJMDu_o5Rlk3Xa9eQgsSRU7vNKpUeF5C-LH0PERixvjkBRa8w0PZ1GJZQx35DCMg&usqp=CAc",
-      "weather": "cold",
-      "_id": 23
-    },
-    {
-      "name": "shirt",
-      "link": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSl7WvgNsAkjVtuQhXoHzpPHUPRIuu33RJs7py7o7RMAX5UlnkrhtCP5P5ku9kVCfzIqBJOSdDJMDu_o5Rlk3Xa9eQgsSRU7vNKpUeF5C-LH0PERixvjkBRa8w0PZ1GJZQx35DCMg&usqp=CAc",
-      "weather": "cold",
-      "_id": 24
-    },
-    {
-      "name": "coat",
-      "link": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQXPFFq3Ka3i2gbGTIE1vQzRuRJ7-CKJX8UP1oUyrQqRVWj2I-_TMnfhTVQB82_lW4CvpwP2g2_dKmgWx7iDNQJn31OimJviPdFxCLojmzmDVG3rzlFJwk6-6-G_9O7SpehnwoRZILaWA&usqp=CAc",
-      "weather": "cold",
-      "_id": 25
-    },
-    {
-      "name": "shirt",
-      "link": "https://www.rei.com/media/48a3f17e-e358-4ef3-bd9f-d024aa2183f1.jpg?size=576x768",
-      "weather": "warm",
-      "_id": 26
     }
   ]
 }

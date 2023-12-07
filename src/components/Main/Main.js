@@ -5,7 +5,7 @@ import './Main.css';
 import { useMemo, useContext } from 'react';
 import { CurrentTemperatureUnitContext } from '../../contexts/CurrentTemperatureUnitContext';
 
-function Main({ weatherTemp, onSelectCard }) {
+function Main({ weatherTemp, onSelectCard,clothingItems }) {
 
 	const {currentTempUnit} = useContext(CurrentTemperatureUnitContext);
 	// console.log(currentTempUnit);
@@ -20,10 +20,11 @@ function Main({ weatherTemp, onSelectCard }) {
 			return 'cold';
 		}
 
-	}, []);
+	}, [temp]);
 	
 
-	const filteredCards = defaultClothingItems.filter((item) => {
+
+	const filteredCards = clothingItems.filter((item) => {
 		return item.weather.toLowerCase() === weatherType;
 	});
 

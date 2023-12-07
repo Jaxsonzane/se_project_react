@@ -13,6 +13,8 @@ import { getCards, postCard, deleteCard } from '../utils/api';
 import { Switch, Route } from 'react-router-dom';
 import AddItemModal from '../components/AddItemModal/AddItemModal';
 
+
+
 function App() {
 	// const weatherTemp = '100';
 	const [activeModal, setActiveModal] = useState('');
@@ -52,35 +54,15 @@ function App() {
 	};
 
 	const handleCardDelete = () => {
-		setIsLoading(true);
 		deleteCard(selectedCard._id)
-			.then(() => {
-				const updatedClothing = clothingItems.filter((item) => {
-					return item._id !== selectedCard._id;
-				});
-				setClothingItems(updatedClothing);
-				handleCloseModal();
-			})
-			.catch((err) => {
-				console.error(err);
-			})
-			.finally(() => setIsLoading(false));
-	};
+		  .then(() => {
+			setIsLoading(clothingItems.filter((item) => item._id !== selectedCard._id));
+			handleCloseModal();
+		  })
+		  .catch((err) => console.log(err));
+	  };
 
-	function deleteCard(id) {
-		return fetch(`http://localhost:3001/items/${id}`, {
-			method: 'DELETE',
-		})
-			.then(response => {
-				if (!response.ok) {
-					throw new Error('Network response was not ok');
-				}
-				return response.json();
-			})
-			.catch(error => {
-				console.error('There has been a problem with your fetch operation:', error);
-			});
-	}
+
 
 	useEffect(() => {
 		getForecastWeather()
@@ -96,10 +78,8 @@ function App() {
 	useEffect(() => {
 		getCards()
 			.then((data) => {
-				const items = data.sort(
-					(a, b) => Date.parse(b.createdAt) - Date.parse(a.createdAt)
-				);
-				setClothingItems(items);
+		
+				setClothingItems(data);
 			})
 			.catch((err) => {
 				console.log(err);
@@ -114,7 +94,7 @@ function App() {
 				<Header onCreateModal={handleCreateModal} />
 				<Switch>
 					<Route exact path="/">
-						<Main weatherTemp={temp} onSelectCard={handleSelectedCard} />
+						<Main weatherTemp={temp} onSelectCard={handleSelectedCard}  clothingItems={clothingItems}/>
 					</Route>
 					<Route path="/profile">
 						<Profile
@@ -139,6 +119,7 @@ function App() {
 						selectedCard={selectedCard}
 						onClose={handleCloseModal}
 						openModal={openConfirmationModal}
+						onSubmit={handleCardDelete}
 						buttonText={!isLoading ? 'Delete Item' : 'Deleting...'}
 					/>
 				)}
