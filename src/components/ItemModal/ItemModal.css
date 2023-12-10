@@ -12,7 +12,7 @@
 
 .modal__content {
 	max-width: 498px;
-	background-color: white;
+	background-color: rgb(255, 255, 255);
 	font-family: 'Cabinet-Grotesk';
 	font-size: 20px;
 	line-height: 24px;
@@ -23,16 +23,16 @@
 }
 
 .modal__close {
-  background: transparent url(../../images/modalformbtn.svg) no-repeat center;
-  border: none;
-  width: 20px;
-  height: 20px;
-  float: right;
-  display: inline-block;
-  z-index: 999;
-  position: relative;
-  bottom: -20px;
-  right: 20px;
+	background: transparent url(../../images/modalformbtn.svg) no-repeat center;
+	border: none;
+	width: 20px;
+	height: 20px;
+	float: right;
+	display: inline-block;
+	z-index: 999;
+	position: relative;
+	bottom: -20px;
+	right: 20px;
 }
 
 .modal__close:hover {
@@ -44,9 +44,9 @@
 	height: 498px;
 	border-top-right-radius: 16px;
 	border-top-left-radius: 16px;
-  z-index: 1;
-  top: -5px;
-  right: 0px;
+	z-index: 1;
+	top: -20px;
+	right: 0px;
 }
 
 .modal__card_name {
@@ -78,10 +78,10 @@
 	font-family: 'CabinetGrotesk' sans-serif;
 	color: #ff4000;
 	opacity: 1;
-  background-color: transparent;
-  margin-left: auto;
-  margin-right: 32px;
-  margin-top: 0px;
+	background-color: transparent;
+	margin-left: auto;
+	margin-right: 32px;
+	margin-top: 0px;
 }
 
 .modal__delete-btn:hover {

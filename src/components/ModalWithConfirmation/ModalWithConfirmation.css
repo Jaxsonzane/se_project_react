@@ -1,5 +1,4 @@
-.modal__add {
-}
+
 
 .modal__text {
 	margin: 0 auto;
@@ -21,9 +20,11 @@
 
 .modal__confirm_btns {
 	display: flex;
-	flex-direction: column;
+	justify-content: center;
 	border: none;
 	background: none;
+	margin-right: 15px;
+	
 }
 
 .modal__modal_btn {

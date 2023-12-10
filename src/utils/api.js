@@ -31,13 +31,14 @@ const postCard = ({ name, link, weather }) => {
 			imageUrl: link,
 			weather: weather,
 		}),
+	
 	};
 
 	return request(`${baseUrl}/items`, options);
 };
 
 const deleteCard = (id) => {
-	return fetch(`http://localhost:3001/items/${id}`, {
+	return fetch(`${baseUrl}/items/${id}`, {
 		method: 'DELETE',
 		headers: {
 			'Content-Type': 'application/json',
@@ -45,4 +46,4 @@ const deleteCard = (id) => {
 	}).then((res) => processServerResponse(res));
 };
 
-export { getCards, postCard, deleteCard, request };
+export { getCards, postCard, deleteCard, request, processServerResponse };
