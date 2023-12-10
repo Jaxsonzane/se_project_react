@@ -16,7 +16,6 @@ import AddItemModal from '../components/AddItemModal/AddItemModal';
 
 
 function App() {
-	// const weatherTemp = '100';
 	const [activeModal, setActiveModal] = useState('');
 	const [selectedCard, setSelectedCard] = useState({});
 	const [temp, setTemp] = useState(0);
@@ -30,6 +29,9 @@ function App() {
 
 	const handleCloseModal = () => {
 		setActiveModal('');
+		if (activeModal === 'delete') {
+			setClothingItems(clothingItems.filter((item) => item._id !== selectedCard._id));
+		}
 	};
 
 	const handleSelectedCard = (card) => {
@@ -38,9 +40,8 @@ function App() {
 	};
 
 	const onAddItem = (values) => {
-		console.log(values);
-		postCard(values).then(() => {
-			setClothingItems((prevItems) => [...prevItems, values]);
+		postCard(values).then((newItem) => {
+			setClothingItems((prevItems) => [newItem, ...prevItems]);
 		});
 		handleCloseModal();
 	};
